@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szakdolgozati Témák - Benczúr Endre</title>
+
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts - Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,0,1;wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm" id="navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#hero">
+                <i class="bi bi-code-square text-primary me-2"></i>
+                Szakdolgozati Témák
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faceid-lidar">Face ID & LiDAR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mtb-suspension">MTB Felfüggesztés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#esp32-webvars">ESP32 WebVars</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="shared-background">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="row align-items-center min-vh-30">
+                    <div class="col-lg-8 mx-auto text-center fade-in-element">
+                        <h1 class="display-4 fw-bold mb-4">
+                            <span class="accent-underline">Szakdolgozati témaötleteim</span>
+                        </h1>
+                        <p class="lead text-secondary mb-4">
+                            Szia, Szczuka Bendegúz vagyok!👋<br />
+                            Elkötelezett és céltudatos fejlesztőként keresem a kihívásokat az informatikában és mérnöki
+                            területen – folyamatosan képzem magam, jelenleg az Óbudai Egyetem üzemmérnök-informatikus
+                            szakán
+                            tanulok. Az alábbiakban három saját projekt-irányú ötletet gyűjtöttem össze, amelyek közül
+                            az
+                            idei szakdolgozati témámat választom majd ki.<br />
+                            <span class="fw-semibold">Nézd meg a portfóliót és kövesd a munkáimat!</span>
+                        </p>
+                        <ul class="list-unstyled mb-5 mx-auto hero-idea-list text-start d-inline-block"
+                            style="max-width: 680px;">
+                            <li class="mb-3 fs-4"><i class="bi bi-phone-vibrate text-primary me-2"></i>iPhone Face ID
+                                szenzor robotikai távérzékelésre</li>
+                            <li class="mb-3 fs-4"><i class="bi bi-bicycle text-success me-2"></i>Mountain bike
+                                felfüggesztés
+                                beállító webalkalmazás</li>
+                            <li class="mb-3 fs-4"><i class="bi bi-cpu text-warning me-2"></i>ESP32 webes
+                                változómonitorozó
+                                könyvtár</li>
+                        </ul>
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="https://github.com/asimoq/" class="btn btn-primary btn-lg hover-glow"
+                                target="_blank">
+                                <i class="bi bi-github me-2"></i>GitHub Profil
+                            </a>
+                            <a href="https://www.linkedin.com/in/szczuka-bende/"
+                                class="btn btn-outline-primary btn-lg hover-glow" target="_blank">
+                                <i class="bi bi-linkedin me-2"></i>LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Face ID & LiDAR Section -->
+        <section id="faceid-lidar" class="py-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto fade-in-element">
+                        <div class="card soft-shadow card-raise mb-5">
+                            <div class="card-header bg-primary text-white">
+                                <h2 class="h3 mb-0">
+                                    <i class="bi bi-phone me-2"></i>
+                                    iPhone Face ID szenzor távolságmérési lehetőségeinek kutatása
+                                </h2>
+                                <p class="mb-0 opacity-75">Hobbi és edukációs robotfejlesztési projektekben</p>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Az oktatási és hobbi robotfejlesztések világában az egyik legnagyobb kihívást a
+                                    pontos
+                                    és megbízható távolságmérés jelentené alacsony költségvetésű környezetben. Az iPhone
+                                    Face ID szenzorai egy eddig kevéssé hasznosított lehetőséget képviselhetnének: az
+                                    infravörös pontmátrix alapú mélységérzékelés elvileg pontosabb és megbízhatóbb
+                                    eredményt
+                                    adhatna, mint a legtöbb olcsón elérhető szenzor.
+                                </p>
+
+                                <div class="tech-stack mb-4">
+                                    <h5>Technológiák:</h5>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-secondary copy-tech" data-tech="Swift">Swift <i
+                                                class="bi bi-clipboard ms-1"></i></span>
+                                        <span class="badge bg-secondary copy-tech" data-tech="ARKit">ARKit <i
+                                                class="bi bi-clipboard ms-1"></i></span>
+                                        <span class="badge bg-secondary copy-tech" data-tech="C++">C++ <i
+                                                class="bi bi-clipboard ms-1"></i></span>
+                                        <span class="badge bg-secondary copy-tech" data-tech="ESP32">ESP32 <i
+                                                class="bi bi-clipboard ms-1"></i></span>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faceid-details">
+                                    További részletek <i class="bi bi-chevron-down"></i>
+                                </button>
+
+                                <div class="collapse mt-4" id="faceid-details">
+                                    <div class="accordion" id="faceid-accordion">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faceid-problem">
+                                                    A probléma
+                                                </button>
+                                            </h2>
+                                            <div id="faceid-problem" class="accordion-collapse collapse"
+                                                data-bs-parent="#faceid-accordion">
+                                                <div class="accordion-body">
+                                                    <p>A jelenlegi piacon elérhető megoldások az alábbi korlátokkal
+                                                        bírnak:
+                                                    </p>
+                                                    <ul>
+                                                        <li>Az infravörös érzékelők rövid hatótávval rendelkeznek, és
+                                                            erősen
+                                                            függnek a környezeti fényviszonyoktól.</li>
+                                                        <li>Az ultrahangos távolságmérők gyakran zajos adatokat adnának,
+                                                            ami
+                                                            pontatlanságot eredményezne.</li>
+                                                        <li>A Time-of-Flight (ToF) szenzorok általában drágábbak, és nem
+                                                            lennének alkalmasak szűk mérési mezőkben.</li>
+                                                        <li>A LiDAR szenzorok ugyan pontosak, de áruk miatt nem
+                                                            jelentenének
+                                                            reális alternatívát hobbi és oktatási projektekben.</li>
+                                                    </ul>
+                                                    <p>Mindezek miatt a hallgatói és hobbi robotok fejlesztésekor a
+                                                        csapatok
+                                                        a távolságmérés kapcsán komoly korlátokba ütközhetnének,
+                                                        különösen
+                                                        versenyhelyzetben.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faceid-importance">
+                                                    Fontosság
+                                                </button>
+                                            </h2>
+                                            <div id="faceid-importance" class="accordion-collapse collapse"
+                                                data-bs-parent="#faceid-accordion">
+                                                <div class="accordion-body">
+                                                    <p>A probléma jelentősége több szinten volna megfogható. Az
+                                                        oktatásban a
+                                                        diákok számára ösztönzőbb lehetne olyan robotprojekteket
+                                                        kivitelezni, amelyek valóban precíz érzékelőrendszerekkel
+                                                        rendelkeznek. Ha a távolságmérő komponens megbízhatatlan, az
+                                                        gyakran
+                                                        csökkentheti a motivációt és ronthatná a projekt sikerességét.
+                                                    </p>
+                                                    <p>A széles körben, alacsony áron elérhető hatékony érzékelők hiánya
+                                                        tehát akadályt jelenthetne az innovatív robotikai megoldások
+                                                        fejlesztésében is. Ez az egyetemi versenyekben is tapasztalható
+                                                        lenne, ahol a pontatlan távolságmérés sokszor a robotok
+                                                        teljesítményének rovására menne.</p>
+                                                    <p>Az iPhone Face ID szenzorai viszont egy eddig kevéssé
+                                                        hasznosított
+                                                        lehetőséget képviselhetnének: az infravörös pontmátrix alapú
+                                                        mélységérzékelés elvileg pontosabb és megbízhatóbb eredményt
+                                                        adhatna, mint a legtöbb olcsón elérhető szenzor. Ráadásul az
+                                                        iPhone-ok széles körű elterjedtsége miatt a fejlesztők
+                                                        könnyebben
+                                                        hozzáférhetnének egy ilyen eszközhöz.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faceid-solution">
+                                                    Megoldás
+                                                </button>
+                                            </h2>
+                                            <div id="faceid-solution" class="accordion-collapse collapse"
+                                                data-bs-parent="#faceid-accordion">
+                                                <div class="accordion-body">
+                                                    <p>A tervezett megoldás egy iOS alkalmazás lehetne, amely a Face ID
+                                                        szenzort használná távolságmérési adatok kinyerésére, majd azok
+                                                        továbbítására egy külső beágyazott rendszer felé.</p>
+                                                    <ul>
+                                                        <li>Az alkalmazás egy olyan API-végpontot biztosíthatna, amely
+                                                            folyamatosan közzétenné az aktuális mélységadatokat.</li>
+                                                        <li>Az adatokat Wi-Fi kapcsolaton keresztül olvashatná be
+                                                            például
+                                                            egy ESP32 mikrokontroller.</li>
+                                                        <li>Ez lehetővé tehetné a robot számára az akadályok pontosabb
+                                                            érzékelését és kikerülését valós időben.</li>
+                                                    </ul>
+                                                    <p>Ez a koncepció tehát ötvözhetné a már meglévő, széles körben
+                                                        elterjedt hardver (iPhone) képességeit a költséghatékony
+                                                        fejlesztői
+                                                        környezetek rugalmasságával.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faceid-tools">
+                                                    Fejlesztési eszközök
+                                                </button>
+                                            </h2>
+                                            <div id="faceid-tools" class="accordion-collapse collapse"
+                                                data-bs-parent="#faceid-accordion">
+                                                <div class="accordion-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <h6>Programozási nyelvek:</h6>
+                                                            <ul>
+                                                                <li>Swift (az iOS alkalmazáshoz)</li>
+                                                                <li>C++ vagy MicroPython (az ESP32 programozásához)</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <h6>Könyvtárak és keretrendszerek:</h6>
+                                                            <ul>
+                                                                <li>ARKit / Vision Framework a mélységadatok kinyerésére
+                                                                </li>
+                                                                <li>URLSession vagy Alamofire az API kommunikációhoz
+                                                                </li>
+                                                                <li>MQTT vagy HTTP könyvtárak az ESP32 kommunikációhoz
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <h6>Fejlesztői környezet:</h6>
+                                                    <ul>
+                                                        <li>Xcode (iOS oldali fejlesztéshez)</li>
+                                                        <li>PlatformIO vagy Arduino IDE (ESP32 programozásához)</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faceid-summary">
+                                                    Összegzés
+                                                </button>
+                                            </h2>
+                                            <div id="faceid-summary" class="accordion-collapse collapse"
+                                                data-bs-parent="#faceid-accordion">
+                                                <div class="accordion-body">
+                                                    <p>Ez a szakdolgozat egy olyan alkalmazás lehetőségeit kutathatná,
+                                                        amely
+                                                        az iPhone Face ID szenzoraira építve kínálna olcsó és pontos
+                                                        távolságmérést hobbi és edukációs robotfejlesztési környezetben.
+                                                        A
+                                                        megoldás új, hozzáférhető alternatívát jelenthetne, amely a
+                                                        jelenlegi piac által hagyott űrt tölthetné ki.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MTB Suspension Section -->
+        <section id="mtb-suspension" class="py-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto fade-in-element">
+                        <div class="card soft-shadow card-raise mb-5">
+                            <div class="card-header bg-success text-black">
+                                <h2 class="h3 mb-0">
+                                    <i class="bi bi-bicycle me-2"></i>
+                                    Mountain bike felfüggesztés beállításokat támogató webalkalmazás
+                                </h2>
+                                <p class="mb-0 opacity-75">Testreszabási javaslatokat nyújtó intelligens rendszer</p>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    A modern mountain bike-ok felfüggesztése rendkívül sok paraméterrel rendelkezik,
+                                    amelyek
+                                    precíz hangolásával nagymértékben javítható a komfort, a stabilitás és a
+                                    teljesítmény. A
+                                    felhasználók többsége azonban nem tudja kihasználni ezeket a lehetőségeket, mert
+                                    hiányzik a szakmai tudás a beállítások hatásairól.
+                                </p>
+
+                                <div class="tech-stack mb-4">
+                                    <h5>Technológiák:</h5>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-secondary copy-tech" data-tech="C#">C# <i
+                                                class="bi bi-clipboard ms-1"></i></span>
+                                        <span class="badge bg-secondary copy-tech" data-tech="Angular">Angular <i
+                                                class="bi bi-clipboard ms-1"></i></span>
+                                        <span class="badge bg-secondary copy-tech" data-tech="ASP.NET Core">ASP.NET Core
+                                            <i class="bi bi-clipboard ms-1"></i></span>
+                                        <span class="badge bg-secondary copy-tech" data-tech="Entity Framework">Entity
+                                            Framework <i class="bi bi-clipboard ms-1"></i></span>
+                                        <span class="badge bg-secondary copy-tech" data-tech="SQL Server">SQL Server <i
+                                                class="bi bi-clipboard ms-1"></i></span>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#mtb-details">
+                                    További részletek <i class="bi bi-chevron-down"></i>
+                                </button>
+
+                                <div class="collapse mt-4" id="mtb-details">
+                                    <div class="accordion" id="mtb-accordion">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#mtb-problem">
+                                                    A probléma
+                                                </button>
+                                            </h2>
+                                            <div id="mtb-problem" class="accordion-collapse collapse"
+                                                data-bs-parent="#mtb-accordion">
+                                                <div class="accordion-body">
+                                                    <p>A modern mountain bike-ok felfüggesztése rendkívül sok
+                                                        paraméterrel
+                                                        rendelkezik (pl. levegőnyomás, visszaút- és
+                                                        kompressziócsillapítás),
+                                                        amelyek precíz hangolásával nagymértékben javítható a komfort, a
+                                                        stabilitás és a teljesítmény. A felhasználók többsége azonban
+                                                        nem
+                                                        tudja kihasználni ezeket a lehetőségeket, mert:</p>
+                                                    <ul>
+                                                        <li>hiányzik a szakmai tudás a beállítások hatásairól,</li>
+                                                        <li>bizonytalanok abban, hogy a módosítás javít vagy ront a
+                                                            helyzeten,</li>
+                                                        <li>nem jegyzik fel és nem követik nyomon korábbi
+                                                            beállításaikat,
+                                                        </li>
+                                                        <li>sokszor egy „fix" alapkonfigurációval használják a kerékpárt
+                                                            minden terepen.</li>
+                                                    </ul>
+                                                    <p>Ennek eredményeképp a kerékpár képességeit nem használják ki
+                                                        teljes
+                                                        mértékben, az élmény csökken, sőt helytelen beállítás esetén a
+                                                        biztonság is veszélybe kerülhet.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#mtb-importance">
+                                                    Fontosság
+                                                </button>
+                                            </h2>
+                                            <div id="mtb-importance" class="accordion-collapse collapse"
+                                                data-bs-parent="#mtb-accordion">
+                                                <div class="accordion-body">
+                                                    <p>A felfüggesztés helyes beállítása alapvetően meghatározza a
+                                                        mountain
+                                                        bike élményt és teljesítményt. Egy rosszul hangolt rendszer:</p>
+                                                    <ul>
+                                                        <li>kényelmetlen és rázós menetet eredményez,</li>
+                                                        <li>technikás terepen instabilitást és sérülésveszélyt is
+                                                            hordoz,
+                                                        </li>
+                                                        <li>a drágább, prémium kerékpárok esetében különösen
+                                                            kihasználatlan
+                                                            potenciált jelent.</li>
+                                                    </ul>
+                                                    <p>Egy felhasználóbarát, adatbázis-alapú és visszajelzésekből tanuló
+                                                        alkalmazás lehetőséget adna a bringásoknak arra, hogy könnyebben
+                                                        megértsék a beállításokat, és tudatosan optimalizálják
+                                                        kerékpárjukat
+                                                        különböző terepviszonyokhoz.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#mtb-solution">
+                                                    Megoldás
+                                                </button>
+                                            </h2>
+                                            <div id="mtb-solution" class="accordion-collapse collapse"
+                                                data-bs-parent="#mtb-accordion">
+                                                <div class="accordion-body">
+                                                    <p>A tervezett webalkalmazás célja, hogy egyszerűen használható
+                                                        felületet biztosítson a felfüggesztés konfigurálásához és nyomon
+                                                        követéséhez. Fő funkciói:</p>
+                                                    <ul>
+                                                        <li><strong>Adatbázis alapú kiválasztás:</strong> a felhasználó
+                                                            kiválaszthatja a kerékpárjához tartozó felfüggesztést a
+                                                            rendszer
+                                                            adatbázisából, az alapbeállításokkal együtt.</li>
+                                                        <li><strong>Beállítási útmutató:</strong> lépésről-lépésre
+                                                            magyarázatot ad arról, hogy az egyes paraméterek milyen
+                                                            hatással
+                                                            vannak a kerékpár viselkedésére.</li>
+                                                        <li><strong>Konfigurációk mentése és összehasonlítása:</strong>
+                                                            a
+                                                            beállítások elmenthetők, így a felhasználó több különböző
+                                                            konfigurációt tud tárolni és gyorsan visszaállítani.</li>
+                                                        <li><strong>Felhasználói visszajelzés → javaslat:</strong>
+                                                            <ul>
+                                                                <li>Menet után a felhasználó egyszerű, hétköznapi
+                                                                    nyelven ad
+                                                                    visszajelzést (pl. „túl rázós volt a köves lejtőn",
+                                                                    „nagyon mélyen ült a bringa az ugrásoknál").</li>
+                                                                <li>A rendszer egy szabályrendszer alapján alakítja át
+                                                                    ezt
+                                                                    konkrét paramétermódosításokra (pl. levegőnyomás 5
+                                                                    PSI
+                                                                    csökkentése, kompresszió puhítása, rebound
+                                                                    gyorsítása).
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <p><strong>Fejlesztési potenciál:</strong> későbbi bővítésként a
+                                                        rendszer képes lehet nyelvi modellek (pl. Gemini API)
+                                                        bevonására,
+                                                        amelyek a beszélt nyelven megadott visszajelzést automatikusan
+                                                        fordítanák konkrét beállítási paraméterekké, így még
+                                                        intuitívabbá
+                                                        téve a használatot.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#mtb-tools">
+                                                    Fejlesztési eszközök
+                                                </button>
+                                            </h2>
+                                            <div id="mtb-tools" class="accordion-collapse collapse"
+                                                data-bs-parent="#mtb-accordion">
+                                                <div class="accordion-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <h6>Programozási nyelvek:</h6>
+                                                            <ul>
+                                                                <li>C# (.NET backend)</li>
+                                                                <li>TypeScript (Angular frontend)</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <h6>Könyvtárak és keretrendszerek:</h6>
+                                                            <ul>
+                                                                <li>Angular (frontend egyoldalas alkalmazás)</li>
+                                                                <li>ASP.NET Core (REST API backend)</li>
+                                                                <li>Entity Framework Core (adatbáziskezelés és ORM)</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <h6>Adatbázis:</h6>
+                                                            <ul>
+                                                                <li>Microsoft SQL Server</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <h6>Fejlesztői környezet:</h6>
+                                                            <ul>
+                                                                <li>Visual Studio és Visual Studio Code</li>
+                                                                <li>Git verziókezelés</li>
+                                                                <li>Docker (opcionális konténerizáció)</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#mtb-summary">
+                                                    Összegzés
+                                                </button>
+                                            </h2>
+                                            <div id="mtb-summary" class="accordion-collapse collapse"
+                                                data-bs-parent="#mtb-accordion">
+                                                <div class="accordion-body">
+                                                    <p>A szakdolgozat egy olyan webalkalmazás fejlesztését célozza,
+                                                        amely
+                                                        egyszerűsíti a mountain bike felfüggesztések beállítását, és a
+                                                        felhasználói visszajelzések alapján konkrét javaslatokat ad
+                                                        paraméterek módosítására. A megoldás hozzájárul a komfort, a
+                                                        teljesítmény és a biztonság növeléséhez, valamint lehetőséget ad
+                                                        az
+                                                        innovatív nyelvi modellek későbbi integrációjára is.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESP32 WebVars Section -->
+        <section id="esp32-webvars" class="py-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto fade-in-element">
+                        <div class="card soft-shadow card-raise mb-5">
+                            <div class="card-header bg-warning text-dark">
+                                <h2 class="h3 mb-0">
+                                    <i class="bi bi-cpu me-2"></i>
+                                    Rugalmas változómonitorozást biztosító ESP32 könyvtár
+                                </h2>
+                                <p class="mb-0 opacity-75">Webes interfész és változóhangolás valós időben</p>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Az ESP32 mikrokontroller-alapú fejlesztések során rendszeresen szembesültem azzal a
+                                    problémával, hogy a rendszer paramétereit a program futása közben kellett volna
+                                    módosítanom és nyomon követnem. A jelenlegi munkafolyamat azonban ezt nagymértékben
+                                    megnehezíti: a paraméterek módosításához teljes újrafordítás és feltöltés szükséges.
+                                </p>
+
+                                <div class="tech-stack mb-4">
+                                    <h5>Technológiák:</h5>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="badge bg-secondary copy-tech" data-tech="C++">C++ <i
+                                                class="bi bi-clipboard ms-1"></i></span>
+                                        <span class="badge bg-secondary copy-tech" data-tech="Arduino Core">Arduino Core
+                                            <i class="bi bi-clipboard ms-1"></i></span>
+                                        <span class="badge bg-secondary copy-tech" data-tech="ESP32 WiFi">ESP32 WiFi <i
+                                                class="bi bi-clipboard ms-1"></i></span>
+                                        <span class="badge bg-secondary copy-tech" data-tech="WebServer">WebServer <i
+                                                class="bi bi-clipboard ms-1"></i></span>
+                                        <span class="badge bg-secondary copy-tech" data-tech="JavaScript">JavaScript <i
+                                                class="bi bi-clipboard ms-1"></i></span>
+                                        <span class="badge bg-secondary copy-tech" data-tech="Bootstrap">Bootstrap <i
+                                                class="bi bi-clipboard ms-1"></i></span>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#esp32-details">
+                                    További részletek <i class="bi bi-chevron-down"></i>
+                                </button>
+
+                                <div class="collapse mt-4" id="esp32-details">
+                                    <div class="accordion" id="esp32-accordion">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#esp32-problem">
+                                                    A probléma
+                                                </button>
+                                            </h2>
+                                            <div id="esp32-problem" class="accordion-collapse collapse"
+                                                data-bs-parent="#esp32-accordion">
+                                                <div class="accordion-body">
+                                                    <p>Az utóbbi években az ESP32 mikrokontroller-alapú fejlesztések
+                                                        egyre
+                                                        népszerűbbek oktatási, hobbi- és ipari területeken egyaránt. Az
+                                                        ESP32 kedvező ár-érték aránya, nagy teljesítménye, integrált
+                                                        Wi-Fi
+                                                        és Bluetooth modulja, valamint széles körű fejlesztői támogatása
+                                                        miatt ideális választás IoT-, robotikai- és egyéb beágyazott
+                                                        rendszerek prototípusainak elkészítéséhez.</p>
+                                                    <p>Saját tapasztalataim alapján – különösen az egyetemi robotikai
+                                                        versenyek során – rendszeresen szembesültem azzal a problémával,
+                                                        hogy a fejlesztés és tesztelés során a rendszer paramétereit a
+                                                        program futása közben kellett volna módosítanom és nyomon
+                                                        követnem.
+                                                        Az ESP32-re épülő megszokott munkafolyamat azonban ezt
+                                                        nagymértékben
+                                                        megnehezíti: a futás közbeni állapotfigyelés kizárólag soros
+                                                        monitoron keresztül lehetséges, a paraméterek módosításához
+                                                        pedig
+                                                        teljes újrafordítás és feltöltés szükséges, még akkor is, ha
+                                                        csupán
+                                                        egyetlen változót kellene átírni.</p>
+                                                    <p>Ez a folyamat rendkívül időigényes, mivel minden apró változtatás
+                                                        a
+                                                        teljes firmware újratöltésével jár. Ennek következtében a kód
+                                                        tesztelése és finomhangolása lassú és kényelmetlen, különösen
+                                                        iteratív fejlesztési ciklusokban, ahol gyakran szükséges a
+                                                        működés
+                                                        közbeni paraméterváltoztatás. A jelenlegi eszközrendszer tehát
+                                                        nem
+                                                        nyújt kellően rugalmas megoldást a valós idejű fejlesztési
+                                                        igényekre.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#esp32-importance">
+                                                    Fontosság
+                                                </button>
+                                            </h2>
+                                            <div id="esp32-importance" class="accordion-collapse collapse"
+                                                data-bs-parent="#esp32-accordion">
+                                                <div class="accordion-body">
+                                                    <p>A probléma megoldása jelentősen növelné a fejlesztés
+                                                        hatékonyságát: a
+                                                        paraméterek menet közbeni módosításával és valós idejű
+                                                        monitorozásával jelentősen lerövidíthetőek az iterációs
+                                                        ciklusok. Ez
+                                                        különösen előnyös az olyan területeken, mint a robotika vagy az
+                                                        IoT,
+                                                        ahol a tesztelés és a gyors visszacsatolás kulcsfontosságú.</p>
+                                                    <p>Továbbá, egy felhasználóbarát webes interfész nemcsak
+                                                        kényelmesebbé
+                                                        tenné a fejlesztést, hanem ipari környezetben is jól
+                                                        hasznosítható
+                                                        lenne, hiszen lehetővé tenné az eszközök helyben történő
+                                                        paraméterezését anélkül, hogy a teljes kódot újra kellene
+                                                        fordítani.
+                                                        Az egységes és könnyen integrálható könyvtár hiánya miatt egy
+                                                        ilyen
+                                                        megoldás újrahasznosítható eszköztárként nemcsak egyéni
+                                                        projektekben, hanem szélesebb fejlesztői közösségben is értéket
+                                                        teremtene.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#esp32-solution">
+                                                    Megoldás
+                                                </button>
+                                            </h2>
+                                            <div id="esp32-solution" class="accordion-collapse collapse"
+                                                data-bs-parent="#esp32-accordion">
+                                                <div class="accordion-body">
+                                                    <p>A szakdolgozat célja egy ESP32 könyvtár (library) kifejlesztése,
+                                                        amely lehetővé teszi a változók futás közbeni monitorozását és
+                                                        (szükség esetén) módosítását egy beépített, reszponzív webes
+                                                        kezelőfelületen keresztül.</p>
+                                                    <p>A könyvtár működési elve a következő:</p>
+                                                    <ul>
+                                                        <li>A fejlesztő a szokásos változók helyett speciális típusokat
+                                                            hozhat létre, például ReadOnlyWifiVariable vagy
+                                                            ChangableWifiVariable formájában.</li>
+                                                        <li>Ezek a változók automatikusan elérhetővé válnak egy webes
+                                                            felületen, amelyet az ESP32 saját Wi-Fi AP módján keresztül
+                                                            sugároz, fix IP-címen elérhetővé téve.</li>
+                                                        <li>A webes interfész modern technológiákkal készül (HTML5,
+                                                            CSS3,
+                                                            JavaScript), és támogatja a valós idejű kommunikációt AJAX
+                                                            vagy
+                                                            WebSocket segítségével.</li>
+                                                    </ul>
+                                                    <p>A megoldás lényeges előnyei:</p>
+                                                    <ul>
+                                                        <li>Nem szükséges a teljes firmware újratöltése a kisebb
+                                                            változtatásokhoz.</li>
+                                                        <li>Átlátható, interaktív módon lehet egyszerre több változót
+                                                            figyelni és állítani.</li>
+                                                        <li>Rugalmasan használható hobbi és ipari projektekben.</li>
+                                                        <li>Közvetlenül más fejlesztők projekjeibe is könnyen
+                                                            beépíthető.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#esp32-tools">
+                                                    Fejlesztési eszközök
+                                                </button>
+                                            </h2>
+                                            <div id="esp32-tools" class="accordion-collapse collapse"
+                                                data-bs-parent="#esp32-accordion">
+                                                <div class="accordion-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <h6>Nyelv és környezet:</h6>
+                                                            <ul>
+                                                                <li>C++ (Arduino Core for ESP32, PlatformIO / Arduino
+                                                                    IDE)
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <h6>Könyvtárak:</h6>
+                                                            <ul>
+                                                                <li>ESP32 WiFi</li>
+                                                                <li>ESPAsyncWebServer vagy WebServer</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <h6>Webes frontend:</h6>
+                                                    <ul>
+                                                        <li>HTML5, CSS3 (Bootstrap), JavaScript (AJAX / WebSocket)</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#esp32-summary">
+                                                    Összegzés
+                                                </button>
+                                            </h2>
+                                            <div id="esp32-summary" class="accordion-collapse collapse"
+                                                data-bs-parent="#esp32-accordion">
+                                                <div class="accordion-body">
+                                                    <p>A dolgozat keretében elkészítendő könyvtár olyan hiányzó eszközt
+                                                        biztosít az ESP32 fejlesztők számára, amely nagymértékben növeli
+                                                        a
+                                                        fejlesztési folyamat gyorsaságát és rugalmasságát. Az eredmény
+                                                        egy
+                                                        könnyen integrálható, újrahasznosítható rendszer lesz, amely
+                                                        egyszerre szolgálja a hobbifejlesztőket, az oktatási projekteket
+                                                        és
+                                                        az ipari prototípus-fejlesztéseket is.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h4 class="mb-3 text-light">Kapcsolat</h4>
+                    <p class="lead mb-4">
+                        Érdeklődik valamelyik téma iránt? Vegye fel velem a kapcsolatot!
+                    </p>
+                    <div class="d-flex justify-content-center gap-3 mb-4">
+                        <a href="https://github.com/asimoq/" class="btn btn-outline-light" target="_blank">
+                            <i class="bi bi-github me-2"></i>GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/szczuka-bende/" class="btn btn-outline-light"
+                            target="_blank">
+                            <i class="bi bi-linkedin me-2"></i>LinkedIn
+                        </a>
+                    </div>
+                    <hr class="my-4">
+                    <p class="mb-0 opacity-75">
+                        © 2025 Szczuka Bendegúz | Szakdolgozati Témák Showcase
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+
+</html>
