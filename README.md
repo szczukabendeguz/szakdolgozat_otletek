@@ -4,7 +4,7 @@ Modern, interaktív webalkalmazás három szakdolgozati témaötlet bemutatásá
 
 ## 🚀 Élő Demo
 
-[Tekintsd meg az élő verziót](https://your-username.github.io/your-repo-name)
+[Tekintsd meg az élő verziót](https://szczukabendeguz.github.io/szakdolgozat_otletek/)
 
 ## 📋 Témák
 
