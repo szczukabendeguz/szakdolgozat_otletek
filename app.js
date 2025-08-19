@@ -1,5 +1,5 @@
 // DOM Content Loaded Event
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     initializeApp();
 });
 
@@ -17,17 +17,17 @@ function initializeApp() {
 // Smooth Scroll Functionality
 function initSmoothScroll() {
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link[href^="#"]');
-    
+
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar
-                
+
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
@@ -41,20 +41,20 @@ function initSmoothScroll() {
 function initScrollSpy() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link[href^="#"]');
-    
+
     function updateActiveLink() {
         let current = '';
         const scrollPosition = window.scrollY + 100;
-        
+
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
-            
+
             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                 current = '#' + section.getAttribute('id');
             }
         });
-        
+
         navLinks.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === current) {
@@ -62,7 +62,7 @@ function initScrollSpy() {
             }
         });
     }
-    
+
     window.addEventListener('scroll', updateActiveLink);
     updateActiveLink(); // Call once on load
 }
@@ -70,11 +70,11 @@ function initScrollSpy() {
 // Fade In Animations with Intersection Observer
 function initFadeInAnimations() {
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px 0px 0px'
     };
-    
-    const observer = new IntersectionObserver(function(entries) {
+
+    const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in-visible');
@@ -82,7 +82,7 @@ function initFadeInAnimations() {
             }
         });
     }, observerOptions);
-    
+
     const fadeElements = document.querySelectorAll('.fade-in-element');
     fadeElements.forEach(element => {
         observer.observe(element);
@@ -92,7 +92,7 @@ function initFadeInAnimations() {
 // Navbar Scroll Effect
 function initNavbarScroll() {
     const navbar = document.getElementById('navbar');
-    
+
     function handleScroll() {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -100,7 +100,7 @@ function initNavbarScroll() {
             navbar.classList.remove('scrolled');
         }
     }
-    
+
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Call once on load
 }
@@ -108,11 +108,11 @@ function initNavbarScroll() {
 // Copy to Clipboard Functionality
 function initCopyToClipboard() {
     const copyTechElements = document.querySelectorAll('.copy-tech');
-    
+
     copyTechElements.forEach(element => {
-        element.addEventListener('click', function() {
+        element.addEventListener('click', function () {
             const techName = this.dataset.tech;
-            
+
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 navigator.clipboard.writeText(techName).then(() => {
                     showCopyFeedback(this, 'Másolva!');
@@ -135,14 +135,14 @@ function fallbackCopyTextToClipboard(text, element) {
     document.body.appendChild(textArea);
     textArea.focus();
     textArea.select();
-    
+
     try {
         document.execCommand('copy');
         showCopyFeedback(element, 'Másolva!');
     } catch (err) {
         showCopyFeedback(element, 'Másolás sikertelen');
     }
-    
+
     document.body.removeChild(textArea);
 }
 
@@ -151,7 +151,7 @@ function showCopyFeedback(element, message) {
     element.innerHTML = message;
     element.style.backgroundColor = '#28a745';
     element.style.color = 'white';
-    
+
     setTimeout(() => {
         element.innerHTML = originalText;
         element.style.backgroundColor = '';
@@ -162,13 +162,13 @@ function showCopyFeedback(element, message) {
 // Hover Effects Enhancement
 function initHoverEffects() {
     const hoverElements = document.querySelectorAll('.card-raise, .hover-glow');
-    
+
     hoverElements.forEach(element => {
-        element.addEventListener('mouseenter', function() {
+        element.addEventListener('mouseenter', function () {
             this.classList.add('hovered');
         });
-        
-        element.addEventListener('mouseleave', function() {
+
+        element.addEventListener('mouseleave', function () {
             this.classList.remove('hovered');
         });
     });
@@ -177,9 +177,9 @@ function initHoverEffects() {
 // Collapse Animation Enhancement
 function initCollapseAnimations() {
     const collapseButtons = document.querySelectorAll('[data-bs-toggle="collapse"]');
-    
+
     collapseButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const icon = this.querySelector('i');
             if (icon && icon.classList.contains('bi-chevron-down')) {
                 setTimeout(() => {
@@ -192,11 +192,11 @@ function initCollapseAnimations() {
             }
         });
     });
-    
+
     // Handle accordion buttons
     const accordionButtons = document.querySelectorAll('.accordion-button');
     accordionButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             // Add a small delay to ensure Bootstrap has processed the state
             setTimeout(() => {
                 const isExpanded = !this.classList.contains('collapsed');
@@ -212,7 +212,7 @@ function initCollapseAnimations() {
 // Utility function to throttle scroll events
 function throttle(func, limit) {
     let inThrottle;
-    return function() {
+    return function () {
         const args = arguments;
         const context = this;
         if (!inThrottle) {
@@ -224,20 +224,20 @@ function throttle(func, limit) {
 }
 
 // Apply throttling to scroll events
-window.addEventListener('scroll', throttle(function() {
+window.addEventListener('scroll', throttle(function () {
     // Any additional scroll-based functionality can be added here
 }, 16)); // ~60fps
 
 // Handle window resize
-window.addEventListener('resize', function() {
+window.addEventListener('resize', function () {
     // Recalculate positions if needed
     // This can be useful for responsive adjustments
 });
 
 // Add loading state management
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     document.body.classList.add('loaded');
-    
+
     // Trigger any post-load animations
     const heroElements = document.querySelectorAll('#hero .fade-in-element');
     heroElements.forEach((element, index) => {
@@ -248,12 +248,12 @@ window.addEventListener('load', function() {
 });
 
 // Error handling for navigation
-window.addEventListener('error', function(e) {
+window.addEventListener('error', function (e) {
     console.warn('Navigation error:', e.message);
 });
 
 // Accessibility improvements
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', function (e) {
     // Handle escape key for closing modals/dropdowns
     if (e.key === 'Escape') {
         const openCollapses = document.querySelectorAll('.collapse.show');
@@ -271,7 +271,7 @@ function preloadCriticalResources() {
     const criticalImages = [
         // Add any critical images here if needed
     ];
-    
+
     criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';

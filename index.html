@@ -23,7 +23,7 @@
         <div class="container">
             <a class="navbar-brand fw-bold" href="#hero">
                 <i class="bi bi-code-square text-primary me-2"></i>
-                Szakdolgozati Témák
+                Szakdolgozat Témák
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -31,13 +31,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
+                        <a class="nav-link" href="#esp32-webvars">ESP32 WebVars</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#faceid-lidar">Face ID & LiDAR</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#mtb-suspension">MTB Felfüggesztés</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#esp32-webvars">ESP32 WebVars</a>
                     </li>
                 </ul>
             </div>
@@ -51,28 +51,29 @@
                 <div class="row align-items-center min-vh-30">
                     <div class="col-lg-8 mx-auto text-center fade-in-element">
                         <h1 class="display-4 fw-bold mb-4">
-                            <span class="accent-underline">Szakdolgozati témaötleteim</span>
+                            <span class="accent-underline">Szakdolgozat témaötleteim</span>
                         </h1>
-                        <p class="lead text-secondary mb-4">
-                            Szia, Szczuka Bendegúz vagyok!👋<br />
+                        <p class="lead text-primary mb-4">
+                            Szia, Szczuka Bendegúz vagyok!👋<br /><br />
                             Elkötelezett és céltudatos fejlesztőként keresem a kihívásokat az informatikában és mérnöki
                             területen – folyamatosan képzem magam, jelenleg az Óbudai Egyetem üzemmérnök-informatikus
                             szakán
-                            tanulok. Az alábbiakban három saját projekt-irányú ötletet gyűjtöttem össze, amelyek közül
+                            tanulok. Az alábbiakban három saját projektet/ötletet gyűjtöttem össze, amelyek közül
                             az
-                            idei szakdolgozati témámat választom majd ki.<br />
+                            idei szakdolgozati témámat választjuk majd ki.<br /><br />
                             <span class="fw-semibold">Nézd meg a portfóliót és kövesd a munkáimat!</span>
                         </p>
                         <ul class="list-unstyled mb-5 mx-auto hero-idea-list text-start d-inline-block"
                             style="max-width: 680px;">
+                            <li class="mb-3 fs-4"><i class="bi bi-cpu text-warning me-2"></i>ESP32 webes
+                                változómonitorozó
+                                könyvtár</li>
                             <li class="mb-3 fs-4"><i class="bi bi-phone-vibrate text-primary me-2"></i>iPhone Face ID
                                 szenzor robotikai távérzékelésre</li>
                             <li class="mb-3 fs-4"><i class="bi bi-bicycle text-success me-2"></i>Mountain bike
                                 felfüggesztés
                                 beállító webalkalmazás</li>
-                            <li class="mb-3 fs-4"><i class="bi bi-cpu text-warning me-2"></i>ESP32 webes
-                                változómonitorozó
-                                könyvtár</li>
+
                         </ul>
                         <div class="d-flex justify-content-center gap-3 flex-wrap">
                             <a href="https://github.com/asimoq/" class="btn btn-primary btn-lg hover-glow"
@@ -89,10 +90,635 @@
             </div>
         </section>
 
+        <!-- ESP32 WebVars Section -->
+        <section id="esp32-webvars" class="pb-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto fade-in-element">
+                        <div class="card soft-shadow card-raise mb-5">
+                            <div class="card-header bg-warning text-dark">
+                                <h2 class="h3 mb-0">
+                                    <i class="bi bi-cpu me-2"></i>
+                                    ESP32 Webes Változómonitorozó és -kezelő Könyvtár
+                                </h2>
+                                <p class="mb-0 opacity-75">Valós idejű változókezelés webes felületen keresztül</p>
+                            </div>
+                            <div class="card-body">
+                                <!-- Projekt Áttekintése -->
+                                <div class="section-content mb-5">
+                                    <h4 class="text-secondary-emphasis mb-3"><i class="bi bi-lightbulb me-2"></i>Projekt
+                                        Áttekintése</h4>
+                                    <p class="lead">
+                                        A projekt célja egy professzionális, könnyen integrálható C++ könyvtár
+                                        fejlesztése ESP32 mikrokontrollerekhez,
+                                        amely lehetővé teszi a programváltozók valós idejű webes monitorozását és
+                                        módosítását. A könyvtár a
+                                        <span class="badge bg-secondary copy-tech hover-glow"
+                                            data-tech="PlatformIO Registry" data-bs-toggle="tooltip"
+                                            title="Nyílt forráskódú ökoszisztéma beágyazott fejlesztéshez">PlatformIO
+                                            Registry</span>-ben és GitHub-on
+                                        lesz elérhető, így bármely fejlesztő egyszerűen integrálhatja projektjeibe.
+                                    </p>
+
+                                    <div class="alert alert-info">
+                                        <i class="bi bi-info-circle me-2"></i>
+                                        <strong>Fontos tisztázás:</strong> A könyvtár csak meglévő változók értékének
+                                        módosítására alkalmas,
+                                        új logika vagy változó bevezetéséhez továbbra is újrafordítás szükséges.
+                                    </div>
+                                </div>
+
+                                <!-- Gyakorlati Példa -->
+                                <div class="section-content mb-5">
+                                    <h4 class="text-secondary-emphasis mb-3"><i class="bi bi-robot me-2"></i>Gyakorlati
+                                        Használati
+                                        Példa</h4>
+                                    <div class="card bg-info-subtle">
+                                        <div class="card-body">
+                                            <h5 class="card-title text-primary text-bold">Mobilrobot PID Szabályozás
+                                                Hangolása
+                                            </h5>
+                                            <p class="card-text">
+                                                Képzeljük el, hogy egy mobilrobotot programozunk, amely egy fal mentén
+                                                haladva navigál.
+                                                A robot ultrahangos szenzorral méri a távolságot a faltól, és
+                                                <span data-bs-toggle="tooltip"
+                                                    title="Proportional-Integral-Derivative vezérlés"
+                                                    class="text-decoration-underline">PID szabályozóval</span>
+                                                korrigálja az irányát.
+                                            </p>
+                                            <ul class="list-unstyled">
+                                                <li><i class="bi bi-arrow-right text-primary me-2"></i><strong>P
+                                                        érték:</strong> Arányos tag - túl nagy érték esetén túllövés
+                                                </li>
+                                                <li><i class="bi bi-arrow-right text-danger me-2"></i><strong>I
+                                                        érték:</strong> Integráló tag - maradó hiba kompenzálása</li>
+                                                <li><i class="bi bi-arrow-right text-primary me-2"></i><strong>D
+                                                        érték:</strong> Deriváló tag - rezgés csillapítása</li>
+                                            </ul>
+                                            <p class="text-muted">
+                                                Hagyományos módszerrel minden egyes paraméter módosításnál újra kellene
+                                                fordítani és feltölteni a kódot.
+                                                A könyvtárral ezek az értékek valós időben, webes felületen keresztül
+                                                hangolhatók!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Fő Komponensek -->
+                                <div class="section-content mb-5">
+                                    <h4 class="text-secondary-emphasis mb-4"><i class="bi bi-diagram-3 me-2"></i>Fő
+                                        Komponensek és
+                                        Feladatok</h4>
+
+                                    <!-- 1. Könyvtár Publikálás -->
+                                    <div class="component-section mb-4">
+                                        <h5 class="text-primary"><i class="bi bi-cloud-upload me-2"></i>1. Könyvtár
+                                            Publikálás és Dokumentáció</h5>
+                                        <p><strong>Célkitűzés:</strong> A könyvtár széles körű elérhetőségének
+                                            biztosítása</p>
+
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <div class="feature-card p-3 border rounded hover-glow bg-">
+                                                    <h5 class="text-info-emphasis"><i
+                                                            class="bi bi-box me-1"></i>PlatformIO
+                                                        Registry integráció</h5>
+                                                    <p class="small mb-0">A könyvtár feltöltése és karbantartása a
+                                                        hivatalos könyvtártárban</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="feature-card p-3 border rounded hover-glow">
+                                                    <h5 class="text-info-emphasis"><i
+                                                            class="bi bi-arduino me-1"></i>Arduino
+                                                        Library Manager</h5>
+                                                    <p class="small mb-0">Kompatibilitás az Arduino IDE
+                                                        könyvtárkezelőjével</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="feature-card p-3 border rounded hover-glow">
+                                                    <h5 class="text-info-emphasis"><i class="bi bi-book me-1"></i>Átfogó
+                                                        dokumentáció</h5>
+                                                    <p class="small mb-0">API referencia, példakódok, telepítési
+                                                        útmutató</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="feature-card p-3 border rounded hover-glow"
+                                                    data-bs-toggle="tooltip"
+                                                    title="Semantic Versioning - verziókezelési szabvány">
+                                                    <h5 class="text-info-emphasis"><i
+                                                            class="bi bi-git me-1"></i>Verziókezelés
+                                                    </h5>
+                                                    <p class="small mb-0">Semantic versioning, changelog vezetése, CI/CD
+                                                        pipeline</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 2. Backend Architektúra -->
+                                    <div class="component-section mb-4">
+                                        <h5 class="text-primary"><i class="bi bi-gear me-2"></i>2. Backend Architektúra
+                                            és API Design</h5>
+                                        <p><strong>Célkitűzés:</strong> Rugalmas és típusbiztos változókezelő rendszer
+                                            fejlesztése</p>
+
+                                        <div class="row g-3 mb-4">
+                                            <div class="col-md-4">
+                                                <div class="feature-card p-3 border rounded hover-glow">
+                                                    <h5 class="text-success"><i
+                                                            class="bi bi-code-square me-1"></i>Típusbiztos kezelés</h5>
+                                                    <p class="small mb-0" data-bs-toggle="tooltip"
+                                                        title="C++ template rendszer típusok automatikus felismerésére">
+                                                        Template-alapú rendszer különböző adattípusokhoz</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="feature-card p-3 border rounded hover-glow">
+                                                    <h5 class="text-success"><i
+                                                            class="bi bi-link-45deg me-1"></i>Pointer referencia</h5>
+                                                    <p class="small mb-0">Közvetlen hivatkozás az eredeti változókra</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="feature-card p-3 border rounded hover-glow">
+                                                    <h5 class="text-success"><i class="bi bi-wifi me-1"></i>Dual WiFi
+                                                        mód</h5>
+                                                    <p class="small mb-0">Meglévő hálózat vagy saját Access Point</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Kód Példák Szekció -->
+                                        <h5 class="text-secondary-emphasis mb-3"><i class="bi bi-code me-2"></i>API
+                                            Használati
+                                            Példák</h5>
+                                        <div class="row g-3">
+                                            <div class="col-lg-6">
+                                                <div class="code-example-card">
+                                                    <h5 class="text-muted small">Könyvtár Include és Inicializálás</h5>
+                                                    <img src="code-include-init.png"
+                                                        alt="Könyvtár include és WiFi inicializálás kódpéldája"
+                                                        class="img-fluid">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="code-example-card">
+                                                    <h5 class="text-muted small">Float Slider Változó</h5>
+                                                    <img src="code-float-slider.png"
+                                                        alt="Float típusú slider változó regisztrálása"
+                                                        class="img-fluid">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="code-example-card">
+                                                    <h5 class="text-muted small">Integer Number Input</h5>
+                                                    <img src="code-int-number.png"
+                                                        alt="Integer típusú number input mező" class="img-fluid">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="code-example-card">
+                                                    <h5 class="text-muted small">String Text Input</h5>
+                                                    <img src="code-string-text.png"
+                                                        alt="String típusú szöveg input mező" class="img-fluid">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="code-example-card">
+                                                    <h5 class="text-muted small">Boolean Switch</h5>
+                                                    <img src="code-bool-switch.png"
+                                                        alt="Boolean kapcsoló típusú vezérlő" class="img-fluid">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="code-example-card">
+                                                    <h5 class="text-muted small">Button Trigger</h5>
+                                                    <img src="code-button-trigger.png" alt="Boolean gomb típusú trigger"
+                                                        class="img-fluid">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 3. Frontend Fejlesztés -->
+                                <div class="component-section mb-4">
+                                    <h5 class="text-primary"><i class="bi bi-palette me-2"></i>3. Frontend
+                                        Fejlesztés és UI/UX Design</h5>
+                                    <p><strong>Célkitűzés:</strong> Intuitív és reszponzív webes kezelőfelület
+                                        kialakítása</p>
+
+                                    <!-- Változótípusok -->
+                                    <div class="mb-4">
+                                        <h5 class="text-info-emphasis mb-3">Változótípusok és UI elemek:</h5>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <div class="ui-type-card p-3 border rounded hover-glow">
+                                                    <h5 class="text-primary"><i class="bi bi-sliders me-1"></i>Numerikus
+                                                        értékek</h5>
+                                                    <ul class="list-unstyled small">
+                                                        <li><i class="bi bi-dot text-success"></i>Slider kontrolok
+                                                            konfigurálható tartománnyal</li>
+                                                        <li><i class="bi bi-dot text-success"></i>Number input mezők
+                                                            step értékkel</li>
+                                                        <li><i class="bi bi-dot text-success"></i>
+                                                            <span data-bs-toggle="tooltip"
+                                                                title="Nagy értéktartományok kezelése exponenciális vagy logaritmikus skálával">
+                                                                Exponenciális/logaritmikus skálázás
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="ui-type-card p-3 border rounded hover-glow">
+                                                    <h5 class="text-primary"><i class="bi bi-fonts me-1"></i>Szöveges
+                                                        értékek</h5>
+                                                    <ul class="list-unstyled small">
+                                                        <li><i class="bi bi-dot text-success"></i>Text input mezők
+                                                            karakterlimit beállítással</li>
+                                                        <li><i class="bi bi-dot text-success"></i>Dropdown menük
+                                                            előre definiált értékekhez</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="ui-type-card p-3 border rounded hover-glow">
+                                                    <h5 class="text-success"><i class="bi bi-toggle-on me-1"></i>Boolean
+                                                        értékek</h5>
+                                                    <ul class="list-unstyled small">
+                                                        <li><i class="bi bi-dot text-success"></i>Toggle switch-ek
+                                                            állapot váltáshoz</li>
+                                                        <li><i class="bi bi-dot text-success"></i>Push button-ok
+                                                            egyszeri műveletek triggereléshez</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="ui-type-card p-3 border rounded hover-glow">
+                                                    <h5 class="text-success"><i
+                                                            class="bi bi-ui-checks me-1"></i>Speciális
+                                                        kontrollok
+                                                    </h5>
+                                                    <ul class="list-unstyled small">
+                                                        <li><i class="bi bi-dot text-success"></i>Color picker
+                                                            színértékekhez</li>
+                                                        <li><i class="bi bi-dot text-success"></i>Time/date picker
+                                                            időpontokhoz</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- UI/UX Jellemzők -->
+                                    <div class="mb-4">
+                                        <h5 class="text-info-emphasis mb-3">UI/UX jellemzők:</h5>
+                                        <div class="row g-2">
+                                            <div class="col-md-4">
+                                                <div
+                                                    class="feature-badge p-2 bg-secondary-subtle rounded text-center hover-glow">
+                                                    <i class="bi bi-phone me-1"></i>Reszponzív design
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="feature-badge p-2 bg-secondary-subtle   rounded text-center hover-glow"
+                                                    data-bs-toggle="tooltip"
+                                                    title="WebSocket vagy AJAX alapú kommunikáció">
+                                                    <i class="bi bi-lightning me-1"></i>Valós idejű frissítés
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div
+                                                    class="feature-badge p-2 bg-secondary-subtle rounded text-center hover-glow">
+                                                    <i class="bi bi-eye me-1"></i>Vizuális visszajelzés
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div
+                                                    class="feature-badge p-2 bg-secondary-subtle rounded text-center hover-glow">
+                                                    <i class="bi bi-search me-1"></i>Keresés és szűrés
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div
+                                                    class="feature-badge p-2 bg-secondary-subtle rounded text-center hover-glow">
+                                                    <i class="bi bi-moon me-1"></i>Dark/Light mód
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="feature-badge p-2 bg-secondary-subtle rounded text-center hover-glow"
+                                                    data-bs-toggle="tooltip"
+                                                    title="Strukturált adatcsere a frontend és backend között">
+                                                    <i class="bi bi-braces me-1"></i>JSON protokoll
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 4. Konfigurációs Profilok -->
+                                <div class="component-section mb-4">
+                                    <h5 class="text-primary"><i class="bi bi-archive me-2"></i>4. Konfigurációs
+                                        Profilok és Állapotkezelés</h5>
+                                    <p><strong>Célkitűzés:</strong> Komplex változóbeállítások gyors mentése és
+                                        visszaállítása</p>
+
+                                    <!-- Profil Management -->
+                                    <div class="mb-4">
+                                        <h5 class="text-success mb-3">Profil Management Rendszer:</h5>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <div
+                                                    class="profile-feature p-3 border-start border-success border-3 bg-success-subtle hover-glow">
+                                                    <h5 class="text-success"><i class="bi bi-save me-1"></i>Állapot
+                                                        mentés</h5>
+                                                    <p class="small mb-0">Az összes módosítható változó aktuális
+                                                        értékének elmentése egyedi profil névvel</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div
+                                                    class="profile-feature p-3 border-start border-primary border-3 bg-primary-subtle hover-glow">
+                                                    <h5 class="text-primary"><i class="bi bi-download me-1"></i>Profil
+                                                        visszaállítás
+                                                    </h5>
+                                                    <p class="small mb-0">Korábban mentett konfigurációk gyors
+                                                        betöltése egy kattintással</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Tárolási Architektúra -->
+                                    <div class="mb-4">
+                                        <h5 class="text-secondary-emphasis mb-3">Tárolási architektúra:</h5>
+                                        <div class="row g-3">
+                                            <div class="col-md-4">
+                                                <div class="storage-card p-3 rounded border hover-glow">
+                                                    <h5 class="text-info-emphasis"><i
+                                                            class="bi bi-browser-chrome me-1"></i>LocalStorage</h5>
+                                                    <p class="small text-muted mb-1">Böngésző alapú</p>
+                                                    <p class="small mb-0">Gyors elérés, felhasználó-specifikus
+                                                        profilok</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="storage-card p-3 rounded border hover-glow"
+                                                    data-bs-toggle="tooltip"
+                                                    title="EEPROM - Electrically Erasable Programmable Read-Only Memory">
+                                                    <h5 class="text-danger"><i
+                                                            class="bi bi-memory me-1"></i>EEPROM/SPIFFS
+                                                    </h5>
+                                                    <p class="small text-muted mb-1">ESP32 memória</p>
+                                                    <p class="small mb-0">Perzisztens tárolás, újraindítás után is
+                                                        elérhető</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="storage-card p-3 rounded border hover-glow">
+                                                    <h5 class="text-success"><i
+                                                            class="bi bi-arrow-left-right me-1"></i>Szinkronizálás
+                                                    </h5>
+                                                    <p class="small text-muted mb-1">Intelligens összehasonlítás</p>
+                                                    <p class="small mb-0">Konfliktuskezelés és választható felülírás
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- UI/UX Design a Profil Kezeléshez -->
+                                    <div class="mb-4">
+                                        <h5 class="text-info-emphasis mb-3">Profil Kezelő UI/UX funkciók:</h5>
+                                        <div class="accordion" id="profileAccordion">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#saveWorkflow">
+                                                        <i class="bi bi-floppy me-2"></i>Mentési Workflow
+                                                    </button>
+                                                </h2>
+                                                <div id="saveWorkflow" class="accordion-collapse collapse"
+                                                    data-bs-parent="#profileAccordion">
+                                                    <div class="accordion-body">
+                                                        <div class="row g-3">
+                                                            <div class="col-md-6">
+                                                                <div class="workflow-item p-2 border rounded">
+                                                                    <strong>Quick Save:</strong> Gyors mentés
+                                                                    automatikusan generált névvel (timestamp)
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div class="workflow-item p-2 border rounded">
+                                                                    <strong>Custom Save:</strong> Felhasználó által
+                                                                    megadott név és opcionális leírás
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mt-3">
+                                                            <div class="workflow-item p-2 border rounded bg-light">
+                                                                <strong>Preview Summary:</strong> Mentés előtt
+                                                                megjelenő összefoglaló az aktuális beállításokról
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#restoreInterface">
+                                                        <i class="bi bi-arrow-clockwise me-2"></i>Visszaállítási
+                                                        Interface
+                                                    </button>
+                                                </h2>
+                                                <div id="restoreInterface" class="accordion-collapse collapse"
+                                                    data-bs-parent="#profileAccordion">
+                                                    <div class="accordion-body">
+                                                        <div class="row g-3">
+                                                            <div class="col-md-6">
+                                                                <div
+                                                                    class="restore-feature p-2 border rounded hover-glow">
+                                                                    <strong>Visual Diff:</strong> Összehasonlító
+                                                                    nézet aktuális és mentett értékek között
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div
+                                                                    class="restore-feature p-2 border rounded hover-glow">
+                                                                    <strong>Selective Restore:</strong> Részleges
+                                                                    visszaállítás - csak kiválasztott változók
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div
+                                                                    class="restore-feature p-2 border rounded hover-glow">
+                                                                    <strong>Confirmation Dialog:</strong> Biztonsági
+                                                                    megerősítés nagyobb változtatások előtt
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div
+                                                                    class="restore-feature p-2 border rounded hover-glow">
+                                                                    <strong>Undo/Redo:</strong> Visszavonási
+                                                                    lehetőség a legutóbbi műveletre
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#mobileOptimization">
+                                                        <i class="bi bi-phone me-2"></i>Mobil Optimalizálás
+                                                    </button>
+                                                </h2>
+                                                <div id="mobileOptimization" class="accordion-collapse collapse"
+                                                    data-bs-parent="#profileAccordion">
+                                                    <div class="accordion-body">
+                                                        <div class="row g-3">
+                                                            <div class="col-md-6">
+                                                                <div
+                                                                    class="mobile-feature p-2 border rounded hover-glow">
+                                                                    <strong>Touch-friendly UI:</strong> Nagy
+                                                                    érintési területek, könnyen elérhető kontrollok
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div
+                                                                    class="mobile-feature p-2 border rounded hover-glow">
+                                                                    <strong>Collapsible Sections:</strong>
+                                                                    Összecsukható szekciók kisebb képernyőkön
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Technikai Kihívások -->
+                                <div class="section-content mb-5">
+                                    <h4 class="text-dark mb-3"><i
+                                            class="bi bi-exclamation-triangle me-2"></i>Technikai
+                                        Kihívások</h4>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div
+                                                class="challenge-card p-3 border-start border-danger border-3 bg-light-subtle hover-glow">
+                                                <h5 class="text-danger">Template programozás</h5>
+                                                <p class="small mb-0">C++ template rendszer komplex használata különböző
+                                                    adattípusokhoz</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="challenge-card p-3 border-start border-warning border-3 bg-light hover-glow"
+                                                data-bs-toggle="tooltip"
+                                                title="WebSocket: kétirányú kommunikációs protokoll">
+                                                <h5 class="text-warning-emphasis">WebSocket/AJAX implementáció</h5>
+                                                <p class="small mb-0">Valós idejű protokoll megvalósítása ESP32
+                                                    platformon</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div
+                                                class="challenge-card p-3 border-start border-info border-3 bg-light hover-glow">
+                                                <h5 class="text-info">Dinamikus HTML generálás</h5>
+                                                <p class="small mb-0">Beágyazott rendszereken történő weblap létrehozás
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div
+                                                class="challenge-card p-3 border-start border-success border-3 bg-light hover-glow">
+                                                <h5 class="text-success">Memóriamenedzsment</h5>
+                                                <p class="small mb-0">Korlátozott erőforrások hatékony kihasználása</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Teljesítményoptimalizálás -->
+                                <div class="section-content mb-5">
+                                    <h4 class="text-success mb-3"><i
+                                            class="bi bi-speedometer me-2"></i>Teljesítményoptimalizálás</h4>
+                                    <div class="row g-3">
+                                        <div class="col-md-3">
+                                            <div class="optimization-item p-3 text-center border rounded hover-glow">
+                                                <i class="bi bi-lightning-charge text-warning fs-3"></i>
+                                                <h5 class="mt-2">Változás detektálás</h5>
+                                                <p class="small mb-0">Csak szükség esetén történő adatátvitel</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="optimization-item p-3 text-center border rounded hover-glow">
+                                                <i class="bi bi-file-zip text-info fs-3"></i>
+                                                <h5 class="mt-2">Komprimált JSON</h5>
+                                                <p class="small mb-0">Hatékony adatprotokoll</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="optimization-item p-3 text-center border rounded hover-glow">
+                                                <i class="bi bi-memory text-danger fs-3"></i>
+                                                <h5 class="mt-2">Memóriahatékonyság</h5>
+                                                <p class="small mb-0">Optimalizált változótárolás</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="optimization-item p-3 text-center border rounded hover-glow">
+                                                <i class="bi bi-arrow-left-right text-success fs-3"></i>
+                                                <h5 class="mt-2">Differenciális sync</h5>
+                                                <p class="small mb-0">Profil adatok hatékony szinkronizálása</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Várható Eredmény -->
+                                <div class="section-content">
+                                    <h4 class="text-primary mb-3"><i class="bi bi-trophy me-2"></i>Várható Eredmény</h4>
+                                    <div class="alert alert-primary">
+                                        <div class="d-flex align-items-start">
+                                            <i class="bi bi-check-circle-fill text-success-emphasis me-3 fs-4"></i>
+                                            <div>
+                                                <h5 class="alert-heading">Professzionális minőségű könyvtár</h5>
+                                                <p class="mb-0">
+                                                    Egy újrahasznosítható könyvtár, amely jelentősen egyszerűsíti az
+                                                    ESP32-alapú projektek
+                                                    fejlesztését és karbantartását, miközben széles körű közösségi
+                                                    felhasználásra alkalmas.
+                                                    A profil management funkció különösen értékessé teszi komplex
+                                                    robotikai és IoT projektekben,
+                                                    ahol gyakran szükséges különböző működési módok között váltani.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
 
 
         <!-- Face ID & LiDAR Section -->
-        <section id="faceid-lidar" class="py-0">
+        <section id="faceid-lidar" class="pt-5 pb-0">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto fade-in-element">
@@ -248,14 +874,14 @@
                                                 <div class="accordion-body">
                                                     <div class="row">
                                                         <div class="col-md-6">
-                                                            <h6>Programozási nyelvek:</h6>
+                                                            <h5>Programozási nyelvek:</h5>
                                                             <ul>
                                                                 <li>Swift (az iOS alkalmazáshoz)</li>
                                                                 <li>C++ vagy MicroPython (az ESP32 programozásához)</li>
                                                             </ul>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <h6>Könyvtárak és keretrendszerek:</h6>
+                                                            <h5>Könyvtárak és keretrendszerek:</h5>
                                                             <ul>
                                                                 <li>ARKit / Vision Framework a mélységadatok kinyerésére
                                                                 </li>
@@ -266,7 +892,7 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                    <h6>Fejlesztői környezet:</h6>
+                                                    <h5>Fejlesztői környezet:</h5>
                                                     <ul>
                                                         <li>Xcode (iOS oldali fejlesztéshez)</li>
                                                         <li>PlatformIO vagy Arduino IDE (ESP32 programozásához)</li>
@@ -305,7 +931,7 @@
         </section>
 
         <!-- MTB Suspension Section -->
-        <section id="mtb-suspension" class="py-0">
+        <section id="mtb-suspension" class="py-2">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto fade-in-element">
@@ -482,14 +1108,14 @@
                                                 <div class="accordion-body">
                                                     <div class="row">
                                                         <div class="col-md-6">
-                                                            <h6>Programozási nyelvek:</h6>
+                                                            <h5>Programozási nyelvek:</h5>
                                                             <ul>
                                                                 <li>C# (.NET backend)</li>
                                                                 <li>TypeScript (Angular frontend)</li>
                                                             </ul>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <h6>Könyvtárak és keretrendszerek:</h6>
+                                                            <h5>Könyvtárak és keretrendszerek:</h5>
                                                             <ul>
                                                                 <li>Angular (frontend egyoldalas alkalmazás)</li>
                                                                 <li>ASP.NET Core (REST API backend)</li>
@@ -499,13 +1125,13 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-6">
-                                                            <h6>Adatbázis:</h6>
+                                                            <h5>Adatbázis:</h5>
                                                             <ul>
                                                                 <li>Microsoft SQL Server</li>
                                                             </ul>
                                                         </div>
                                                         <div class="col-md-6">
-                                                            <h6>Fejlesztői környezet:</h6>
+                                                            <h5>Fejlesztői környezet:</h5>
                                                             <ul>
                                                                 <li>Visual Studio és Visual Studio Code</li>
                                                                 <li>Git verziókezelés</li>
@@ -547,239 +1173,7 @@
             </div>
         </section>
 
-        <!-- ESP32 WebVars Section -->
-        <section id="esp32-webvars" class="py-0">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto fade-in-element">
-                        <div class="card soft-shadow card-raise mb-5">
-                            <div class="card-header bg-warning text-dark">
-                                <h2 class="h3 mb-0">
-                                    <i class="bi bi-cpu me-2"></i>
-                                    Rugalmas változómonitorozást biztosító ESP32 könyvtár
-                                </h2>
-                                <p class="mb-0 opacity-75">Webes interfész és változóhangolás valós időben</p>
-                            </div>
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Az ESP32 mikrokontroller-alapú fejlesztések során rendszeresen szembesültem azzal a
-                                    problémával, hogy a rendszer paramétereit a program futása közben kellett volna
-                                    módosítanom és nyomon követnem. A jelenlegi munkafolyamat azonban ezt nagymértékben
-                                    megnehezíti: a paraméterek módosításához teljes újrafordítás és feltöltés szükséges.
-                                </p>
 
-                                <div class="tech-stack mb-4">
-                                    <h5>Technológiák:</h5>
-                                    <div class="d-flex flex-wrap gap-2">
-                                        <span class="badge bg-secondary copy-tech" data-tech="C++">C++ <i
-                                                class="bi bi-clipboard ms-1"></i></span>
-                                        <span class="badge bg-secondary copy-tech" data-tech="Arduino Core">Arduino Core
-                                            <i class="bi bi-clipboard ms-1"></i></span>
-                                        <span class="badge bg-secondary copy-tech" data-tech="ESP32 WiFi">ESP32 WiFi <i
-                                                class="bi bi-clipboard ms-1"></i></span>
-                                        <span class="badge bg-secondary copy-tech" data-tech="WebServer">WebServer <i
-                                                class="bi bi-clipboard ms-1"></i></span>
-                                        <span class="badge bg-secondary copy-tech" data-tech="JavaScript">JavaScript <i
-                                                class="bi bi-clipboard ms-1"></i></span>
-                                        <span class="badge bg-secondary copy-tech" data-tech="Bootstrap">Bootstrap <i
-                                                class="bi bi-clipboard ms-1"></i></span>
-                                    </div>
-                                </div>
-
-                                <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#esp32-details">
-                                    További részletek <i class="bi bi-chevron-down"></i>
-                                </button>
-
-                                <div class="collapse mt-4" id="esp32-details">
-                                    <div class="accordion" id="esp32-accordion">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#esp32-problem">
-                                                    A probléma
-                                                </button>
-                                            </h2>
-                                            <div id="esp32-problem" class="accordion-collapse collapse"
-                                                data-bs-parent="#esp32-accordion">
-                                                <div class="accordion-body">
-                                                    <p>Az utóbbi években az ESP32 mikrokontroller-alapú fejlesztések
-                                                        egyre
-                                                        népszerűbbek oktatási, hobbi- és ipari területeken egyaránt. Az
-                                                        ESP32 kedvező ár-érték aránya, nagy teljesítménye, integrált
-                                                        Wi-Fi
-                                                        és Bluetooth modulja, valamint széles körű fejlesztői támogatása
-                                                        miatt ideális választás IoT-, robotikai- és egyéb beágyazott
-                                                        rendszerek prototípusainak elkészítéséhez.</p>
-                                                    <p>Saját tapasztalataim alapján – különösen az egyetemi robotikai
-                                                        versenyek során – rendszeresen szembesültem azzal a problémával,
-                                                        hogy a fejlesztés és tesztelés során a rendszer paramétereit a
-                                                        program futása közben kellett volna módosítanom és nyomon
-                                                        követnem.
-                                                        Az ESP32-re épülő megszokott munkafolyamat azonban ezt
-                                                        nagymértékben
-                                                        megnehezíti: a futás közbeni állapotfigyelés kizárólag soros
-                                                        monitoron keresztül lehetséges, a paraméterek módosításához
-                                                        pedig
-                                                        teljes újrafordítás és feltöltés szükséges, még akkor is, ha
-                                                        csupán
-                                                        egyetlen változót kellene átírni.</p>
-                                                    <p>Ez a folyamat rendkívül időigényes, mivel minden apró változtatás
-                                                        a
-                                                        teljes firmware újratöltésével jár. Ennek következtében a kód
-                                                        tesztelése és finomhangolása lassú és kényelmetlen, különösen
-                                                        iteratív fejlesztési ciklusokban, ahol gyakran szükséges a
-                                                        működés
-                                                        közbeni paraméterváltoztatás. A jelenlegi eszközrendszer tehát
-                                                        nem
-                                                        nyújt kellően rugalmas megoldást a valós idejű fejlesztési
-                                                        igényekre.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#esp32-importance">
-                                                    Fontosság
-                                                </button>
-                                            </h2>
-                                            <div id="esp32-importance" class="accordion-collapse collapse"
-                                                data-bs-parent="#esp32-accordion">
-                                                <div class="accordion-body">
-                                                    <p>A probléma megoldása jelentősen növelné a fejlesztés
-                                                        hatékonyságát: a
-                                                        paraméterek menet közbeni módosításával és valós idejű
-                                                        monitorozásával jelentősen lerövidíthetőek az iterációs
-                                                        ciklusok. Ez
-                                                        különösen előnyös az olyan területeken, mint a robotika vagy az
-                                                        IoT,
-                                                        ahol a tesztelés és a gyors visszacsatolás kulcsfontosságú.</p>
-                                                    <p>Továbbá, egy felhasználóbarát webes interfész nemcsak
-                                                        kényelmesebbé
-                                                        tenné a fejlesztést, hanem ipari környezetben is jól
-                                                        hasznosítható
-                                                        lenne, hiszen lehetővé tenné az eszközök helyben történő
-                                                        paraméterezését anélkül, hogy a teljes kódot újra kellene
-                                                        fordítani.
-                                                        Az egységes és könnyen integrálható könyvtár hiánya miatt egy
-                                                        ilyen
-                                                        megoldás újrahasznosítható eszköztárként nemcsak egyéni
-                                                        projektekben, hanem szélesebb fejlesztői közösségben is értéket
-                                                        teremtene.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#esp32-solution">
-                                                    Megoldás
-                                                </button>
-                                            </h2>
-                                            <div id="esp32-solution" class="accordion-collapse collapse"
-                                                data-bs-parent="#esp32-accordion">
-                                                <div class="accordion-body">
-                                                    <p>A szakdolgozat célja egy ESP32 könyvtár (library) kifejlesztése,
-                                                        amely lehetővé teszi a változók futás közbeni monitorozását és
-                                                        (szükség esetén) módosítását egy beépített, reszponzív webes
-                                                        kezelőfelületen keresztül.</p>
-                                                    <p>A könyvtár működési elve a következő:</p>
-                                                    <ul>
-                                                        <li>A fejlesztő a szokásos változók helyett speciális típusokat
-                                                            hozhat létre, például ReadOnlyWifiVariable vagy
-                                                            ChangableWifiVariable formájában.</li>
-                                                        <li>Ezek a változók automatikusan elérhetővé válnak egy webes
-                                                            felületen, amelyet az ESP32 saját Wi-Fi AP módján keresztül
-                                                            sugároz, fix IP-címen elérhetővé téve.</li>
-                                                        <li>A webes interfész modern technológiákkal készül (HTML5,
-                                                            CSS3,
-                                                            JavaScript), és támogatja a valós idejű kommunikációt AJAX
-                                                            vagy
-                                                            WebSocket segítségével.</li>
-                                                    </ul>
-                                                    <p>A megoldás lényeges előnyei:</p>
-                                                    <ul>
-                                                        <li>Nem szükséges a teljes firmware újratöltése a kisebb
-                                                            változtatásokhoz.</li>
-                                                        <li>Átlátható, interaktív módon lehet egyszerre több változót
-                                                            figyelni és állítani.</li>
-                                                        <li>Rugalmasan használható hobbi és ipari projektekben.</li>
-                                                        <li>Közvetlenül más fejlesztők projekjeibe is könnyen
-                                                            beépíthető.
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#esp32-tools">
-                                                    Fejlesztési eszközök
-                                                </button>
-                                            </h2>
-                                            <div id="esp32-tools" class="accordion-collapse collapse"
-                                                data-bs-parent="#esp32-accordion">
-                                                <div class="accordion-body">
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <h6>Nyelv és környezet:</h6>
-                                                            <ul>
-                                                                <li>C++ (Arduino Core for ESP32, PlatformIO / Arduino
-                                                                    IDE)
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <h6>Könyvtárak:</h6>
-                                                            <ul>
-                                                                <li>ESP32 WiFi</li>
-                                                                <li>ESPAsyncWebServer vagy WebServer</li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <h6>Webes frontend:</h6>
-                                                    <ul>
-                                                        <li>HTML5, CSS3 (Bootstrap), JavaScript (AJAX / WebSocket)</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#esp32-summary">
-                                                    Összegzés
-                                                </button>
-                                            </h2>
-                                            <div id="esp32-summary" class="accordion-collapse collapse"
-                                                data-bs-parent="#esp32-accordion">
-                                                <div class="accordion-body">
-                                                    <p>A dolgozat keretében elkészítendő könyvtár olyan hiányzó eszközt
-                                                        biztosít az ESP32 fejlesztők számára, amely nagymértékben növeli
-                                                        a
-                                                        fejlesztési folyamat gyorsaságát és rugalmasságát. Az eredmény
-                                                        egy
-                                                        könnyen integrálható, újrahasznosítható rendszer lesz, amely
-                                                        egyszerre szolgálja a hobbifejlesztőket, az oktatási projekteket
-                                                        és
-                                                        az ipari prototípus-fejlesztéseket is.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
     </div>
     <!-- Footer -->
