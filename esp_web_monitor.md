@@ -1,4 +1,4 @@
-# Szakdolgozati Témák - Szczuka Bendegúz
+# Szakdolgozat Témák - Szczuka Bendegúz
 
 ## 1. ESP32 Webes Változómonitorozó és -kezelő Könyvtár
 
