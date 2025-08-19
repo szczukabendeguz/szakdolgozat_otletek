@@ -5,6 +5,7 @@ Modern, interaktív webalkalmazás három szakdolgozati témaötlet bemutatásá
 ## 🚀 Élő Demo
 
 [Élő weboldal | GitHub pages](https://szczukabendeguz.github.io/szakdolgozat_otletek/)
+[MarkDown Jegyzet](https://szczukabendeguz.github.io/szakdolgozat_otletek/esp_web_monitor.md)
 
 ## 📋 Témák
 
