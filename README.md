@@ -35,8 +35,7 @@ Modern, interaktív webalkalmazás három szakdolgozati témaötlet bemutatásá
 
 ## 🛠️ Technikai Stack
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **Framework**: Bootstrap 5.3
+- **Frontend**: HTML5, CSS3, JavaScript, Bootstrap
 - **Ikonok**: Bootstrap Icons
 - **Betűtípus**: Google Fonts (Roboto)
 - **Animációk**: CSS Transitions + JavaScript
