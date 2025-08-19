@@ -45,12 +45,53 @@ Hagyományos módszerrel minden egyes paraméter módosításnál újra kellene 
 
 ##### API Használati Példák
 
-- Könyvtár Include és Inicializálás
-- Float Slider Változó
-- Integer Number Input
-- String Text Input
-- Boolean Switch
-- Button Trigger
+* Könyvtár Include és Inicializálás
+
+```cpp
+#include <ESP_VARIABLE_MONITOR.h>
+WebMonitor webMonitor;
+webMonitor.init("WiFi_SSID", "password123");
+```
+
+* Float Slider Változó
+
+```cpp
+float pid_p = 1.5;
+webMonitor.addSliderFloat("pid_p", "P (Proportional)", 
+                          "Arányos tag", &pid_p, 0.0, 10.0, 0.1);
+```
+
+* Integer Number Input
+
+```cpp
+int motor_speed = 150;
+webMonitor.addNumberInt("motor_speed", "Motor Speed", 
+                        "Fordulatszám", &motor_speed, 0, 255);
+```
+
+* String Text Input
+
+```cpp
+String device_name = "Robot_01";
+webMonitor.addTextString("device_name", "Eszköz Név", 
+                         "Azonosító", &device_name, 32);
+```
+
+* Boolean Switch
+
+```cpp
+bool led_status = false;
+webMonitor.addBoolSwitch("led_status", "LED Állapot", 
+                         "Kapcsoló", &led_status);
+```
+
+* Button Trigger
+
+```cpp
+bool reset_flag = false;
+webMonitor.addBoolButton("reset_btn", "Reset Gomb", 
+                         "Újraindítás trigger", &reset_flag);
+```
 
 
 #### 3. Frontend Fejlesztés és UI/UX Design
